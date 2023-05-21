@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Login</title>
+    <style>
+        *{
+            margin-bottom: 15px;
+        }
+        .container{
+            height: 150px;
+            width: 150px;
+            margin: 0 auto;
+            border: 2px solid red;
+            padding:  150px;
+        }
+    </style>
+</head>
+<body>
+    <center><h1>Welcome To Login Bro</h1></center>
+    <hr>
+    <div class="container">
+        <label for="name"> Enter the Email id : </label>
+        <input type="email" id="name"><br>
+        <label for="pass">Password : </label>
+        <input type="password" id="pass"><br>
+        <center><button type="submit" id="btn" onclick="login()">Submit</button></center>
+    </div>
+    <script>
+        function login(){
+        let email=document.getElementById('name').value;
+        let pass=document.getElementById('pass').value;
+        if (email=='younus' && pass=='younus') {
+            location.assign('success.html')
+        }
+        else{
+            window.alert("Login Failed")
+        }
+    }
+    </script>
+</body>
+</html>
